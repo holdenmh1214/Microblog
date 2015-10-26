@@ -1,12 +1,20 @@
 <html>
 <body>
-Posts by {{name}}:<br>
+<center>
+Posts by <text style="font-size:20;color:red"><b>{{name}}</b></text>:<br><br>
 <form action="create-post" method="post">
-    <input type = "text" placeholder="Write a post" name="post"/>
-    <button type = "submit">Submit</button>
+
+    <input style="height:50px;width:600px;font-size:16pt;"
+           type = "text" placeholder="Write a post" name="post"/><br/><br/>
+    <button style="height:50px;width:100px;" type = "submit"><text style="font-size:16pt">Submit</text></button>
 </form>
+</center>
+<text style="size:14pt">
+
 {{#posts}}
-{{textArea}}<br>
+{{name}} - <i>{{textArea}}</i><br>
 {{/posts}}
+
+</text>
 </body>
 </html>

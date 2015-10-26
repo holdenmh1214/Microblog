@@ -42,7 +42,7 @@ public class Main {
                 ((request, response) -> {
                     HashMap m = new HashMap();
                     m.put("name", user.name);
-                    m.put("post", posts);
+                    m.put("posts", posts);
                     return new ModelAndView(m, "posts.html");
                 }),
                 new MustacheTemplateEngine()
