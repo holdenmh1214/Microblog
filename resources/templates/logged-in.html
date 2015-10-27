@@ -8,13 +8,22 @@ Posts by <text style="font-size:20;color:red"><b>{{name}}</b></text>:<br><br>
            type = "text" placeholder="Write a post" name="post"/><br/><br/>
     <button style="height:50px;width:100px;" type = "submit"><text style="font-size:16pt">Submit</text></button>
 </form>
-</center>
+</center><br>
+<form action = "/delete-post" method="post">
+    <input type= "number" placeholder= "Post #" name="postid"/>
+    <button type="submit">Delete</button>
+</form>
+<form action = "/edit-post" method="post">
+    <input type="number" placeholder="Post #" name="postid"/>
+    <input type= "text" placeholder= "Edited Post" name="text"/>
+    <button type="submit">Edit</button>
+</form>
+<center>
 <text style="size:14pt">
-
 {{#posts}}
-{{name}} - <i>{{textArea}}</i><br>
+{{name}} - {{id}}. <i>{{textArea}}</i><br>
 {{/posts}}
-
 </text>
+</center>
 </body>
 </html>
