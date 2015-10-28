@@ -63,7 +63,7 @@ public class Main {
                     try {
                         int idNum = Integer.valueOf(id);
                         posts.remove(idNum-1);
-                        for (int i=0; i< posts.size(); i++){ //for loop to update beer numbers
+                        for (int i=0; i< posts.size(); i++){
                             posts.get(i).id = i+1;
                         }
                     }catch (Exception e) {
@@ -81,7 +81,7 @@ public class Main {
                     try {
                         int idNum = Integer.valueOf(id);
                         posts.get(idNum-1).textArea= request.queryParams("text");
-                        for (int i=0; i< posts.size(); i++){ //for loop to update beer numbers
+                        for (int i=0; i< posts.size(); i++){
                             posts.get(i).id = i+1;
                         }
                     }catch (Exception e) {
